@@ -1,0 +1,1983 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Lab3/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>Лабораторная 4 - ITMO ICT WebDevelopment 2025-2026</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#no4-vuejs" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href=".." title="ITMO ICT WebDevelopment 2025-2026" class="md-header__button md-logo" aria-label="ITMO ICT WebDevelopment 2025-2026" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ITMO ICT WebDevelopment 2025-2026
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная 4
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Manfred5120/TonikX-ITMO_ICT_WebDevelopment_2025-2026.git" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ITMO ICT WebDevelopment 2025-2026" class="md-nav__button md-logo" aria-label="ITMO ICT WebDevelopment 2025-2026" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ITMO ICT WebDevelopment 2025-2026
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Manfred5120/TonikX-ITMO_ICT_WebDevelopment_2025-2026.git" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная 4
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Структура маршрутов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Описание интерфейсов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Описание интерфейсов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Страница входа (Login)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Страница регистрации (Register)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Главная страница (Files)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Страница папки (Folder)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Действия с файлами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Действия с файлами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Просмотр файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Скачивание файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удаление файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Расшаривание файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Перемещение файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Действия с папками
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Действия с папками">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создание папки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Переименование папки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удаление папки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Страница профиля (Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-public-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Публичный доступ (Public Link)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. API запросы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. API запросы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Авторизация (Auth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Файлы (Files)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Папки (Folders)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Публичные ссылки (Public)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Документация
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Компоненты Vue
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Компоненты Vue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-appvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 App.vue (корневой компонент)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-navbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 NavBar (навигационная панель)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-filecard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 FileCard (карточка файла)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-foldercard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 FolderCard (карточка папки)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-foldertree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 FolderTree (дерево папок)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-breadcrumbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Breadcrumbs (хлебные крошки)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-uploadform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 UploadForm (форма загрузки)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-createfolderform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 CreateFolderForm (создание папки)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-sharemodal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 ShareModal (модальное окно расшаривания)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-confirmdialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 ConfirmDialog (диалог подтверждения)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-loginform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 LoginForm (форма входа)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-registerform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 RegisterForm (форма регистрации)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-profileform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13 ProfileForm (форма профиля)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Структура маршрутов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Описание интерфейсов
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Описание интерфейсов">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Страница входа (Login)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-register" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Страница регистрации (Register)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Главная страница (Files)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Страница папки (Folder)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Действия с файлами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Действия с файлами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Просмотр файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Скачивание файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удаление файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Расшаривание файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Перемещение файла
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Действия с папками
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Действия с папками">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создание папки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Переименование папки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удаление папки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.7 Страница профиля (Profile)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28-public-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.8 Публичный доступ (Public Link)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. API запросы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. API запросы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Авторизация (Auth)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Файлы (Files)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Папки (Folders)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-public" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Публичные ссылки (Public)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Документация
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-vue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Компоненты Vue
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Компоненты Vue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-appvue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 App.vue (корневой компонент)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-navbar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 NavBar (навигационная панель)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-filecard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 FileCard (карточка файла)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-foldercard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 FolderCard (карточка папки)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-foldertree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 FolderTree (дерево папок)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46-breadcrumbs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 Breadcrumbs (хлебные крошки)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47-uploadform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 UploadForm (форма загрузки)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-createfolderform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 CreateFolderForm (создание папки)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#49-sharemodal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.9 ShareModal (модальное окно расшаривания)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#410-confirmdialog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.10 ConfirmDialog (диалог подтверждения)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-loginform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.11 LoginForm (форма входа)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-registerform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.12 RegisterForm (форма регистрации)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-profileform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.13 ProfileForm (форма профиля)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="no4-vuejs">Лабораторная работа №4 Реализация клиентской части средствами Vue.js</h1>
+<p><strong>Студент:</strong> Митрофанов Георгий 
+<strong>Университет:</strong> ИТМО<br />
+<strong>Группа:</strong> К3339</p>
+<h2 id="1">1. Структура маршрутов</h2>
+<ul>
+<li><code>/login</code> - Страница входа </li>
+<li><code>/register</code> - Страница регистрации </li>
+<li><code>/</code> - Главная страница (список файлов и папок)</li>
+<li><code>/folder/:id</code> - Просмотр содержимого папки</li>
+<li><code>/profile</code> - Профиль пользователя </li>
+</ul>
+<h2 id="2">2. Описание интерфейсов</h2>
+<h3 id="21-login">2.1 Страница входа (Login)</h3>
+<p><strong>URL:</strong> <code>/login</code></p>
+<p><strong>API запрос:</strong> <code>POST /api/auth/jwt/create/</code></p>
+<p>Назначение: авторизация пользователя в системе.</p>
+<p>Функции:
+- ввод имени пользователя
+- ввод пароля
+- отправка запроса авторизации
+- сохранение JWT токена в localStorage
+- редирект на главную страницу после успешного входа</p>
+<hr />
+<h3 id="22-register">2.2 Страница регистрации (Register)</h3>
+<p><strong>URL:</strong> <code>/register</code></p>
+<p><strong>API запрос:</strong> <code>POST /api/auth/users/</code></p>
+<p>Назначение: создание нового пользователя.</p>
+<p>Функции:
+- ввод имени пользователя
+- ввод email (опционально)
+- ввод пароля
+- подтверждение пароля
+- автоматический вход после успешной регистрации</p>
+<hr />
+<h3 id="23-files">2.3 Главная страница (Files)</h3>
+<p><strong>URL:</strong> <code>/</code></p>
+<p><strong>API запросы:</strong>
+- <code>GET /api/files/</code> — получение списка файлов
+- <code>GET /api/folders/</code> — получение списка папок
+- <code>POST /api/files/bulk_upload/</code> — загрузка файлов
+- <code>POST /api/folders/</code> — создание папки</p>
+<p>Назначение: управление файлами и папками пользователя.</p>
+<p>Функции:
+- просмотр всех файлов и папок в корневой директории
+- загрузка новых файлов (один или несколько)
+- создание новой папки
+- переход в папку по клику
+- отображение размера и типа файлов
+- кнопки действий для каждого файла</p>
+<hr />
+<h3 id="24-folder">2.4 Страница папки (Folder)</h3>
+<p><strong>URL:</strong> <code>/folder/:id</code></p>
+<p><strong>API запросы:</strong>
+- <code>GET /api/folders/{id}/content/</code> — содержимое папки
+- <code>GET /api/folders/{id}/</code> — информация о папке</p>
+<p>Назначение: просмотр содержимого конкретной папки.</p>
+<p>Функции:
+- просмотр файлов и вложенных папок
+- навигация "назад" к родительской папке
+- отображение пути к текущей папке
+- загрузка файлов в текущую папку
+- создание вложенной папки</p>
+<hr />
+<h3 id="25">2.5 Действия с файлами</h3>
+<h4 id="_1">Просмотр файла</h4>
+<p><strong>API запрос:</strong> <code>GET /api/files/{id}/</code></p>
+<p>При клике на файл открывается страница с детальной информацией:
+- имя файла
+- размер
+- тип (MIME)
+- дата загрузки
+- предпросмотр (для изображений)</p>
+<h4 id="_2">Скачивание файла</h4>
+<p><strong>API запрос:</strong> <code>GET /api/files/{id}/download/</code></p>
+<p>Кнопка "Скачать" на карточке файла инициирует загрузку файла на устройство пользователя.</p>
+<h4 id="_3">Удаление файла</h4>
+<p><strong>API запрос:</strong> <code>DELETE /api/files/{id}/</code></p>
+<p>Кнопка "Удалить" помечает файл как удалённый (мягкое удаление). Файл исчезает из списка, но сохраняется в базе.</p>
+<h4 id="_4">Расшаривание файла</h4>
+<p><strong>API запрос:</strong> <code>POST /api/files/{id}/share/</code></p>
+<p>Кнопка "Поделиться" создаёт публичную ссылку на файл:
+- указывается время жизни ссылки (в минутах)
+- указывается максимальное количество скачиваний
+- генерируется уникальный токен
+- ссылка копируется в буфер обмена</p>
+<h4 id="_5">Перемещение файла</h4>
+<p><strong>API запрос:</strong> <code>POST /api/files/{id}/move/</code></p>
+<p>Возможность переместить файл в другую папку:
+- открывается список папок
+- выбор целевой папки
+- подтверждение перемещения</p>
+<hr />
+<h3 id="26">2.6 Действия с папками</h3>
+<h4 id="_6">Создание папки</h4>
+<p><strong>API запрос:</strong> <code>POST /api/folders/</code></p>
+<p>Модальное окно с полем для ввода имени новой папки.</p>
+<h4 id="_7">Переименование папки</h4>
+<p><strong>API запрос:</strong> <code>PATCH /api/folders/{id}/</code></p>
+<p>Изменение имени существующей папки.</p>
+<h4 id="_8">Удаление папки</h4>
+<p><strong>API запрос:</strong> <code>DELETE /api/folders/{id}/</code></p>
+<p>Удаление папки вместе со всем содержимым (файлы помечаются как удалённые).</p>
+<hr />
+<h3 id="27-profile">2.7 Страница профиля (Profile)</h3>
+<p><strong>URL:</strong> <code>/profile</code></p>
+<p><strong>API запросы:</strong>
+- <code>GET /api/auth/users/me/</code> — получение данных
+- <code>PATCH /api/auth/users/me/</code> — обновление данных
+- <code>POST /api/auth/users/set_password/</code> — смена пароля</p>
+<p>Назначение: управление данными пользователя.</p>
+<p>Функции:
+- просмотр имени пользователя и email
+- изменение email
+- изменение пароля (старый пароль, новый пароль, подтверждение)
+- выход из аккаунта (очистка токена)</p>
+<hr />
+<h3 id="28-public-link">2.8 Публичный доступ (Public Link)</h3>
+<p><strong>URL:</strong> <code>/p/:token</code></p>
+<p><strong>API запрос:</strong> <code>GET /p/{token}/</code></p>
+<p>Назначение: доступ к файлу по публичной ссылке без авторизации.</p>
+<p>Функции:
+- проверка срока действия ссылки
+- проверка лимита скачиваний
+- автоматическое скачивание файла
+- отображение ошибки, если ссылка истекла</p>
+<h2 id="3-api">3. API запросы</h2>
+<h3 id="31-auth">3.1 Авторизация (Auth)</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Эндпоинт</th>
+<th>Описание</th>
+<th>Тело запроса</th>
+<th>Ответ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/users/</code></td>
+<td>Регистрация нового пользователя</td>
+<td><code>{ "username": "user", "password": "pass" }</code></td>
+<td>Данные созданного пользователя</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/jwt/create/</code></td>
+<td>Получение JWT токена (вход)</td>
+<td><code>{ "username": "user", "password": "pass" }</code></td>
+<td><code>{ "access": "token", "refresh": "token" }</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/jwt/refresh/</code></td>
+<td>Обновление access токена</td>
+<td><code>{ "refresh": "token" }</code></td>
+<td><code>{ "access": "new_token" }</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/auth/users/me/</code></td>
+<td>Информация о текущем пользователе</td>
+<td>-</td>
+<td>Данные пользователя</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td><code>/api/auth/users/me/</code></td>
+<td>Обновление данных пользователя</td>
+<td><code>{ "email": "new@mail.com" }</code></td>
+<td>Обновлённые данные</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/auth/users/set_password/</code></td>
+<td>Смена пароля</td>
+<td><code>{ "new_password": "newpass", "current_password": "oldpass" }</code></td>
+<td><code>204 No Content</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="32-files">3.2 Файлы (Files)</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Эндпоинт</th>
+<th>Описание</th>
+<th>Параметры</th>
+<th>Тело запроса</th>
+<th>Ответ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/api/files/</code></td>
+<td>Список всех файлов пользователя</td>
+<td>-</td>
+<td>-</td>
+<td>Массив файлов</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/files/</code></td>
+<td>Загрузить один файл</td>
+<td>-</td>
+<td><code>multipart/form-data</code> с полем <code>file</code></td>
+<td>Данные загруженного файла</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/files/{id}/</code></td>
+<td>Детальная информация о файле</td>
+<td>ID файла</td>
+<td>-</td>
+<td>Данные файла</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/api/files/{id}/</code></td>
+<td>Удалить файл (мягкое удаление)</td>
+<td>ID файла</td>
+<td>-</td>
+<td><code>204 No Content</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/files/{id}/download/</code></td>
+<td>Скачать файл</td>
+<td>ID файла</td>
+<td>-</td>
+<td>Файл для скачивания</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/files/{id}/preview/</code></td>
+<td>Получить превью файла</td>
+<td>ID файла</td>
+<td>-</td>
+<td>Изображение-превью</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/files/{id}/move/</code></td>
+<td>Переместить файл в папку</td>
+<td>ID файла</td>
+<td><code>{ "folder_id": 5 }</code></td>
+<td><code>{ "message": "Файл перемещен" }</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/files/{id}/share/</code></td>
+<td>Создать публичную ссылку</td>
+<td>ID файла</td>
+<td><code>{ "ttl_minutes": 60, "max_downloads": 5 }</code></td>
+<td><code>{ "url": "/p/token/" }</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/files/bulk_upload/</code></td>
+<td>Загрузить несколько файлов</td>
+<td>-</td>
+<td><code>multipart/form-data</code> с полем <code>files</code></td>
+<td>Массив загруженных файлов</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="33-folders">3.3 Папки (Folders)</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Эндпоинт</th>
+<th>Описание</th>
+<th>Параметры</th>
+<th>Тело запроса</th>
+<th>Ответ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/api/folders/</code></td>
+<td>Список всех папок пользователя</td>
+<td>-</td>
+<td>-</td>
+<td>Массив папок</td>
+</tr>
+<tr>
+<td>POST</td>
+<td><code>/api/folders/</code></td>
+<td>Создать новую папку</td>
+<td>-</td>
+<td><code>{ "name": "Новая папка", "parent": null }</code></td>
+<td>Данные созданной папки</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/folders/{id}/</code></td>
+<td>Информация о папке</td>
+<td>ID папки</td>
+<td>-</td>
+<td>Данные папки</td>
+</tr>
+<tr>
+<td>PUT/PATCH</td>
+<td><code>/api/folders/{id}/</code></td>
+<td>Обновить папку (переименовать)</td>
+<td>ID папки</td>
+<td><code>{ "name": "Новое имя" }</code></td>
+<td>Обновлённые данные</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td><code>/api/folders/{id}/</code></td>
+<td>Удалить папку</td>
+<td>ID папки</td>
+<td>-</td>
+<td><code>204 No Content</code></td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/api/folders/{id}/content/</code></td>
+<td>Содержимое папки</td>
+<td>ID папки</td>
+<td>-</td>
+<td><code>{ "folders": [], "files": [] }</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="34-public">3.4 Публичные ссылки (Public)</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Эндпоинт</th>
+<th>Описание</th>
+<th>Параметры</th>
+<th>Ответ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/p/{token}/</code></td>
+<td>Доступ к файлу по публичной ссылке</td>
+<td>Токен ссылки</td>
+<td>Файл для скачивания или ошибка 404</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="35">3.5 Документация</h3>
+<table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Эндпоинт</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td><code>/swagger/</code></td>
+<td>Swagger UI — интерактивная документация API</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/redoc/</code></td>
+<td>ReDoc — альтернативная документация</td>
+</tr>
+<tr>
+<td>GET</td>
+<td><code>/swagger.json/</code></td>
+<td>JSON схема API</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-vue">4. Компоненты Vue</h2>
+<h3 id="41-appvue">4.1 App.vue (корневой компонент)</h3>
+<p>Корневой компонент приложения, содержит основную структуру и роутер.</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div id=&quot;app&quot;&gt;
+    &lt;NavBar v-if=&quot;!isAuthPage&quot; /&gt;
+    &lt;router-view /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<p><strong>Назначение:</strong> 
+- Отображает навигационную панель на всех страницах, кроме страниц входа/регистрации
+- Подключает роутер для отображения текущей страницы</p>
+<hr />
+<h3 id="42-navbar">4.2 NavBar (навигационная панель)</h3>
+<p>Компонент навигации, отображается на всех страницах после авторизации.</p>
+<p><strong>Отображает:</strong>
+- Логотип/название приложения
+- Ссылку на главную страницу (файлы)
+- Ссылку на профиль пользователя
+- Имя текущего пользователя
+- Кнопку "Выйти"</p>
+<p><strong>Функции:</strong>
+- Навигация между разделами
+- Выход из аккаунта (очистка токена, редирект на логин)</p>
+<hr />
+<h3 id="43-filecard">4.3 FileCard (карточка файла)</h3>
+<p>Компонент для отображения файла в списке.</p>
+<p><strong>Пропсы (входные данные):</strong>
+- <code>file</code> — объект с данными файла (id, name, size, mime_type, uploaded_at)</p>
+<p><strong>Отображает:</strong>
+- Иконка в зависимости от типа файла (изображение, видео, pdf, документ)
+- Имя файла
+- Размер (в байтах/KB/MB)
+- Дата загрузки
+- Кнопки действий</p>
+<p><strong>Кнопки действий:</strong>
+- <code>Скачать</code> — вызывает API <code>/api/files/{id}/download/</code>
+- <code>Поделиться</code> — открывает модальное окно для создания ссылки
+- <code>Удалить</code> — подтверждение удаления, затем вызов API <code>DELETE /api/files/{id}/</code>
+- <code>Переместить</code> — открывает список папок для выбора</p>
+<p><strong>События (emits):</strong>
+- <code>@delete</code> — событие удаления файла
+- <code>@share</code> — событие расшаривания
+- <code>@move</code> — событие перемещения</p>
+<pre><code class="language-vue">&lt;template&gt;
+  &lt;div class=&quot;file-card&quot;&gt;
+    &lt;div class=&quot;file-icon&quot;&gt;📄&lt;/div&gt;
+    &lt;div class=&quot;file-info&quot;&gt;
+      &lt;div class=&quot;file-name&quot;&gt;{{ file.name }}&lt;/div&gt;
+      &lt;div class=&quot;file-meta&quot;&gt;{{ formatSize(file.size) }} • {{ formatDate(file.uploaded_at) }}&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;file-actions&quot;&gt;
+      &lt;button @click=&quot;downloadFile&quot;&gt;Скачать&lt;/button&gt;
+      &lt;button @click=&quot;shareFile&quot;&gt;Поделиться&lt;/button&gt;
+      &lt;button @click=&quot;deleteFile&quot;&gt;Удалить&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
+<hr />
+<h3 id="44-foldercard">4.4 FolderCard (карточка папки)</h3>
+<p>Компонент для отображения папки в списке.</p>
+<p><strong>Пропсы:</strong>
+- <code>folder</code> — объект с данными папки (id, name, created_at)</p>
+<p><strong>Отображает:</strong>
+- Иконка папки 
+- Название папки
+- Дата создания
+- Кнопки действий</p>
+<p><strong>Кнопки действий:</strong>
+- <code>Открыть</code> — переход на страницу <code>/folder/{id}</code>
+- <code>Переименовать</code> — открывает форму для нового имени
+- <code>Удалить</code> — подтверждение удаления</p>
+<p><strong>События:</strong>
+- <code>@open</code> — открыть папку
+- <code>@rename</code> — переименовать
+- <code>@delete</code> — удалить</p>
+<hr />
+<h3 id="45-foldertree">4.5 FolderTree (дерево папок)</h3>
+<p>Компонент для отображения иерархической структуры папок.</p>
+<p><strong>Пропсы:</strong>
+- <code>folders</code> — массив папок
+- <code>currentFolderId</code> — ID текущей папки</p>
+<p><strong>Отображает:</strong>
+- Вложенный список папок с отступами
+- Возможность раскрывать/сворачивать вложенные папки
+- Подсветка текущей папки</p>
+<p><strong>Используется для:</strong>
+- Навигации по папкам
+- Выбора папки при перемещении файлов</p>
+<hr />
+<h3 id="46-breadcrumbs">4.6 Breadcrumbs (хлебные крошки)</h3>
+<p>Компонент навигации по пути к текущей папке.</p>
+<p><strong>Пропсы:</strong>
+- <code>path</code> — массив объектов {id, name} от корня до текущей папки</p>
+<p><strong>Отображает:</strong>
+- Последовательность ссылок: Корень → Папка1 → Папка2 → Текущая</p>
+<p><strong>Функции:</strong>
+- Клик по любой части пути ведёт в соответствующую папку
+- Показывает текущее местоположение пользователя</p>
+<hr />
+<h3 id="47-uploadform">4.7 UploadForm (форма загрузки)</h3>
+<p>Компонент для загрузки файлов.</p>
+<p><strong>Пропсы:</strong>
+- <code>currentFolderId</code> — ID папки, в которую загружаются файлы</p>
+<p><strong>Отображает:</strong>
+- Кнопку "Выбрать файлы"
+- Список выбранных файлов
+- Прогресс загрузки
+- Кнопку "Загрузить"</p>
+<p><strong>Функции:</strong>
+- Выбор нескольких файлов через input
+- Отображение имён и размеров выбранных файлов
+- Загрузка через API <code>/api/files/bulk_upload/</code>
+- Индикация прогресса
+- Очистка формы после загрузки</p>
+<hr />
+<h3 id="48-createfolderform">4.8 CreateFolderForm (создание папки)</h3>
+<p>Компонент для создания новой папки.</p>
+<p><strong>Пропсы:</strong>
+- <code>currentFolderId</code> — ID текущей папки (родительской)</p>
+<p><strong>Отображает:</strong>
+- Кнопку "Создать папку"
+- Модальное окно с полем ввода имени</p>
+<p><strong>Функции:</strong>
+- Ввод имени новой папки
+- Валидация (имя не пустое)
+- Создание через API <code>POST /api/folders/</code>
+- Обновление списка после создания</p>
+<hr />
+<h3 id="49-sharemodal">4.9 ShareModal (модальное окно расшаривания)</h3>
+<p>Компонент для создания публичной ссылки на файл.</p>
+<p><strong>Пропсы:</strong>
+- <code>fileId</code> — ID файла
+- <code>show</code> — флаг отображения</p>
+<p><strong>Отображает:</strong>
+- Заголовок с именем файла
+- Поле для ввода времени жизни ссылки (минуты)
+- Поле для ввода лимита скачиваний
+- Кнопку "Создать ссылку"
+- Сгенерированную ссылку (после создания)
+- Кнопку "Копировать"</p>
+<p><strong>Функции:</strong>
+- Создание ссылки через API <code>/api/files/{id}/share/</code>
+- Копирование ссылки в буфер обмена
+- Закрытие модального окна</p>
+<hr />
+<h3 id="410-confirmdialog">4.10 ConfirmDialog (диалог подтверждения)</h3>
+<p>Универсальный компонент для подтверждения действий.</p>
+<p><strong>Пропсы:</strong>
+- <code>title</code> — заголовок
+- <code>message</code> — сообщение
+- <code>show</code> — флаг отображения</p>
+<p><strong>События:</strong>
+- <code>@confirm</code> — подтверждение действия
+- <code>@cancel</code> — отмена</p>
+<p><strong>Используется для:</strong>
+- Подтверждение удаления файла
+- Подтверждение удаления папки
+- Подтверждение выхода из аккаунта</p>
+<hr />
+<h3 id="411-loginform">4.11 LoginForm (форма входа)</h3>
+<p>Компонент страницы входа.</p>
+<p><strong>Отображает:</strong>
+- Поле ввода имени пользователя
+- Поле ввода пароля
+- Кнопку "Войти"
+- Ссылку на регистрацию</p>
+<p><strong>Функции:</strong>
+- Валидация полей
+- Вызов API <code>/api/auth/jwt/create/</code>
+- Сохранение токена в localStorage
+- Редирект на главную при успехе
+- Отображение ошибки при неверных данных</p>
+<hr />
+<h3 id="412-registerform">4.12 RegisterForm (форма регистрации)</h3>
+<p>Компонент страницы регистрации.</p>
+<p><strong>Отображает:</strong>
+- Поле ввода имени пользователя
+- Поле ввода email (опционально)
+- Поле ввода пароля
+- Поле подтверждения пароля
+- Кнопку "Зарегистрироваться"
+- Ссылку на вход</p>
+<p><strong>Функции:</strong>
+- Валидация полей (совпадение паролей)
+- Вызов API <code>/api/auth/users/</code>
+- Автоматический вход после регистрации
+- Отображение ошибок валидации</p>
+<hr />
+<h3 id="413-profileform">4.13 ProfileForm (форма профиля)</h3>
+<p>Компонент страницы профиля.</p>
+<p><strong>Отображает:</strong>
+- Текущее имя пользователя
+- Текущий email (с возможностью редактирования)
+- Форму смены пароля
+- Кнопку "Сохранить"</p>
+<p><strong>Функции:</strong>
+- Загрузка данных через API <code>/api/auth/users/me/</code>
+- Обновление email через <code>PATCH /api/auth/users/me/</code>
+- Смена пароля через <code>POST /api/auth/users/set_password/</code>
+- Валидация полей
+- Отображение успешных изменений</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [{"toc.integrate": false}], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
